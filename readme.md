@@ -4,6 +4,12 @@ Hi! I'm Aleem -- this is a lil project for the Leap hackathon. It's like the mid
 
 <b>note:</b> this is a WIP, so if you have any feedback feel free to toss me a message on [twitter](https://twitter.com/aleemrehmtulla). still learning how to make bots, so there's a lot of room for improvement 🙂
 
+
+
+https://user-images.githubusercontent.com/60443878/219637278-125b1fa9-0024-47a1-b20c-57f44e62f0ba.mp4
+
+
+
 ### Basic Setup
 
 1. Fork this repo & download it
