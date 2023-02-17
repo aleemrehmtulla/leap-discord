@@ -127,6 +127,6 @@ export const trainExecute = async (interaction) => {
   // training the model takes 10-15 minutes, so we can't wait for it to finish
   // send a message telling them to check back later
   await interaction.editReply(
-    `Model training started. Try generating with /custom in 15 minutes!`
+    `Model training started. You'll be able to use it with /generate in 15-20 minutes!`
   );
 };
