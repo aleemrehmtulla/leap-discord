@@ -35,6 +35,6 @@ https://user-images.githubusercontent.com/60443878/219637278-125b1fa9-0024-47a1-
 
 #### Links
 
-- [LeapML](https://leampl.dev)
+- [LeapML](https://leapml.dev)
 - [LeapML Discord](https://discord.gg/leapml)
 - [Tweet Demo](https://twitter.com/aleemrehmtulla/status/1626649421164453889)
