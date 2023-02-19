@@ -5,6 +5,7 @@ import env from "dotenv";
 env.config({ path: "../.env" });
 
 const secretKey = process.env.ENCRYPTION_KEY;
+const SERVER_URL = process.env.SERVER_URL;
 
 export const loginData = new SlashCommandBuilder()
   .setName("login")
