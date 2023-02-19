@@ -2,13 +2,9 @@
 
 Hi! I'm Aleem -- this is a lil project for the Leap hackathon. It's like the midjourney bot, but since we use Leap it allows you to train your own models 🪄
 
-<b>note:</b> this is a WIP, so if you have any feedback feel free to toss me a message on [twitter](https://twitter.com/aleemrehmtulla). still learning how to make bots, so there's a lot of room for improvement 🙂
-
-
+<b>note:</b> this bot has now been updated, this is the old version. this one relies on the discord admin to provide a leap api, and all generations go through one account. the main branch contains a new version, where we store info in a database, and each user must input their own api key.
 
 https://user-images.githubusercontent.com/60443878/219637278-125b1fa9-0024-47a1-b20c-57f44e62f0ba.mp4
-
-
 
 ### Basic Setup
 
