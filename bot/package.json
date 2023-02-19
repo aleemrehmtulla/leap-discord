@@ -5,6 +5,7 @@
   "dependencies": {
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
+    "firebase-admin": "^11.5.0",
     "node-fetch": "^3.3.0"
   },
   "type": "module"

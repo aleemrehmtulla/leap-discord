@@ -8,9 +8,9 @@ import {
 } from "discord.js";
 
 import env from "dotenv";
-env.config();
-
-const API_KEY = process.env.API_KEY;
+import getKey from "../utils/getKey.js";
+import getModels from "../utils/getModels.js";
+env.config({ path: "../../.env" });
 
 export const generateData = new SlashCommandBuilder()
   .setName("generate")
@@ -22,8 +22,12 @@ export const generateData = new SlashCommandBuilder()
       .setRequired(true)
   );
 
-export const generateExecute = async (interaction, choices) => {
+export const generateExecute = async (interaction) => {
   const prompt = interaction.options.getString("prompt");
+
+  const API_KEY = await getKey(interaction.user.id);
+
+  const choices = await getModels(API_KEY);
 
   // limit to discord max. if wanted you can add a second row 🙂
   const row = new ActionRowBuilder().addComponents(

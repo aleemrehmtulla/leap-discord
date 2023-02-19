@@ -1,9 +1,8 @@
 import fetch from "node-fetch";
 import { SlashCommandBuilder } from "discord.js";
 import env from "dotenv";
-env.config();
-
-const API_KEY = process.env.API_KEY;
+import getKey from "../utils/getKey.js";
+env.config({ path: "../../.env" });
 
 export const trainData = new SlashCommandBuilder()
   .setName("train")
@@ -47,30 +46,14 @@ export const trainExecute = async (interaction) => {
   const title = interaction.options.getString("title");
   const subject = interaction.options.getString("keyword");
 
+  const API_KEY = getKey(interaction.user.id);
+
   interaction.reply("Beginning model creation...");
 
-  //  TODO: Same as above, this feels wrong lol
-  const image1 = interaction.options.getAttachment("image-1");
-  const image2 = interaction.options.getAttachment("image-2");
-  const image3 = interaction.options.getAttachment("image-3");
-  const image4 = interaction.options.getAttachment("image-4");
-  const image5 = interaction.options.getAttachment("image-5");
-  const image6 = interaction.options.getAttachment("image-6");
-  const image7 = interaction.options.getAttachment("image-7");
-
-  // make an array of only the images that arent null. also feels wrong
-  const images = [
-    image1?.url,
-    image2?.url,
-    image3?.url,
-    image4?.url,
-    image5?.url,
-    image6?.url,
-    image7?.url,
-  ];
-  //   remove all the undefined values
-  const filteredImages = images.filter((image) => image !== undefined);
-  console.log(filteredImages);
+  // Maps through all images to create an array
+  const images = Array.from({ length: 7 }, (_, i) =>
+    interaction.options.getAttachment(`image-${i + 1}`)
+  ).filter((image) => image !== undefined);
 
   // Create the model
   const createModelUrl = "https://api.leapml.dev/api/v1/images/models";
@@ -98,7 +81,7 @@ export const trainExecute = async (interaction) => {
       authorization: "Bearer " + API_KEY,
     },
     body: JSON.stringify({
-      images: filteredImages,
+      images,
     }),
   };
   const addedImages = await fetch(addImagesUrl, addImagesOptions);
