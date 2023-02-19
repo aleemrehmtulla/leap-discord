@@ -9,7 +9,7 @@ const getKey = async (userId) => {
   if (!userId) throw new Error("No user ID provided!");
 
   // Get the encrypted API key from the database
-  const getUser = await fetch(`${SERVER_URL}/getkey`, {
+  const getUser = await fetch(`${SERVER_URL}getkey`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
