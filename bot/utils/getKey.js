@@ -1,7 +1,7 @@
 import crypto from "crypto";
 import env from "dotenv";
 import fetch from "node-fetch";
-env.config({ path: "../../.env" });
+env.config({ path: "../.env" });
 
 const SERVER_URL = process.env.SERVER_URL;
 
