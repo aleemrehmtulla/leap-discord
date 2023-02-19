@@ -22,6 +22,10 @@ client.on("ready", async () => {
   await client.application.commands.set([generateData, trainData, loginData]);
 });
 
+client.on("error", (error) => {
+  console.log(error);
+});
+
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
