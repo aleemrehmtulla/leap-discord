@@ -25,7 +25,7 @@ export const loginExecute = async (interaction) => {
   const encodedKey = initialVector.toString("hex") + encodedApiKey;
 
   // make the request to the api
-  const response = await fetch("http://localhost:3000/makeuser", {
+  const response = await fetch(`${SERVER_URL}makeuser`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

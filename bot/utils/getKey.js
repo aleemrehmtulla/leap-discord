@@ -3,11 +3,13 @@ import env from "dotenv";
 import fetch from "node-fetch";
 env.config({ path: "../../.env" });
 
+const SERVER_URL = process.env.SERVER_URL;
+
 const getKey = async (userId) => {
   if (!userId) throw new Error("No user ID provided!");
 
   // Get the encrypted API key from the database
-  const getUser = await fetch("http://localhost:3000/getkey", {
+  const getUser = await fetch(`${SERVER_URL}/getkey`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
