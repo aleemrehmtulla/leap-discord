@@ -5,7 +5,7 @@ The official discord bot for [LeapML](https://leapml.dev)! This bot allows anyon
 <b>note:</b> the old version is in `original` branch. the old bot used 1 API key for all users, provided by the admin.
 
 <!-- create a  button to invite the bot to your server -->
-<a href="https://discord.com/api/oauth2/authorize?client_id=1074609521458155590&permissions=2112&scope=bot%20applications.commands">
+<a href="https://discord.com/api/oauth2/authorize?client_id=1075966451590107156&permissions=2112&scope=bot%20applications.commands">
   <img src="https://img.shields.io/badge/Invite%20to%20your%20server-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Invite to your server" />
   </a>
 
