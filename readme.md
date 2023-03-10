@@ -2,9 +2,8 @@
 
 <div align="left">
   <img src="https://img.shields.io/badge/I%20no%20longer%20maintain%20this%20bot. Best%20to%20fork%20and%20host%20yourself.-FF0000?style=for-the-badge&logoColor=white" alt="Warning" />
-
-<img src="https://img.shields.io/badge/
-  Original%20branch%20better%20for%20indie%20hackers.-FF5F15?style=for-the-badge&logoColor=white" alt="Warning" />
+  <br />
+<img src="https://img.shields.io/badge/Original%20branch%20better%20for%20indie%20hackers.-FF5F15?style=for-the-badge&logoColor=white" alt="Warning" />
 </div>
 
 The official discord bot for [LeapML](https://leapml.dev)! This bot allows anyone in your server to interact with their LeapML account, including training models, generating images, and even editing images 🔥
